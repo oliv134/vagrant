@@ -7,10 +7,10 @@ function usage()
     echo "Option for install"
     echo ""
     echo "-h  --help      this help"
-    echo "-p  --path      path of jdk-xxxxx-xxxxx-xxx.tar.gz"
+    echo "    --jdk-path      path of jdk-xxxxx-xxxxx-xxx.tar.gz"
     echo "                visit: http://www.oracle.com/technetwork/java/javase/downloads/"
     echo "                and copy lastest JDK for Linux x86 or x64 .tar.gz link"
-    echo "-nu --noupdate  Install the new version while keeping the previous ones"
+    echo "    --no-update  Install the new version while keeping the previous ones"
     echo ""
 }
 
@@ -22,10 +22,10 @@ while [ "$1" != "" ]; do
             usage
             exit
             ;;
-        --environment)
+        --jdk-path)
             ENVIRONMENT=$VALUE
             ;;
-        --db-path)
+        --no-update)
             DB_PATH=$VALUE
             ;;
         *)
